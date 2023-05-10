@@ -5,7 +5,7 @@
 #   gem "sqlite3"
 #
 default: &default
-  adapter: mysql2
+  adapter: sqlite3
   encoding: utf8
   reconnect: true
   timeout: 5000
@@ -13,7 +13,7 @@ default: &default
   database: sidekiq_test
   username: root
   password: root
-  socket: /var/run/mysqld/mysqld.sock
+  # socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
